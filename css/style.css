@@ -7,7 +7,7 @@ body {
 }
 .container{
     width: 100vw;
-    height: 100vh;
+    height: 95vh;
     background: #d4dde7;
     display: flex;
     flex-direction: row;
@@ -62,15 +62,15 @@ input{
     flex-direction: column;
 }
 
-.idade-mostrar{
+#idade-mostrar{
     font-size: xx-large;
 }
-.idade-mostrar h1{
+#idade-mostrar h1{
     text-transform: lowercase;
     font-weight: bold;
 }
 
-.idade-mostrar b{
+#idade-mostrar b{
     color: #8a2be2;
     font-weight: bold;
     font-size: larger;
@@ -106,4 +106,20 @@ button:hover{
 }
 button:hover >i{
     color: white;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d4dde7;
+    padding-bottom: 12px;
+}
+footer a{
+    margin-left: 5px;
+    color: #8a2be2;
+}
+
+a:hover{
+    color: #063a75;
 }

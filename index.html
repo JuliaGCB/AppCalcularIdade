@@ -14,35 +14,35 @@
             <div class="inputs">
                 <div class="idade-input">
                     <p>Day</p>
-                    <input type="text" name="" id="input-dia" placeholder="DD">
+                    <input type="number" name="" id="input-dia" placeholder="DD">
                 </div>
                 <div class="idade-input">
                     <p>Month</p>
-                    <input type="text" name="" id="input-mes" placeholder="MM">
+                    <input type="number" name="" id="input-mes" placeholder="MM">
                 </div>
                 <div class="idade-input">
                     <p>Year</p>
-                    <input type="text" name="" id="input-ano" placeholder="YYYY">
+                    <input type="number" name="" id="input-ano" placeholder="YYYY">
                 </div>
              </div>
               <div class="botao">
                     <div class="divid"><hr>
                     </div>
                     <div class="bot-box">
-                       <button type="submit">
+                       <button onclick="calcularIdade()">
                        <i class="fa-solid fa-arrow-down fa-xl"></i>
                        </button>
                     </div>
                 </div>
                 
-            <div class="idade-mostrar">
-                <div id="ano"><h1><b>--</b> Year</h1></div>
-                <div id="meses"><h1><b>--</b> Mounths</h1></div>
-                <div id="dias"><h1><b>--</b> Days</h1></div>
+            <div id="idade-mostrar">
+                <div><h1><b id="ano">--</b> Year</h1></div>
+                <div><h1><b id="meses">--</b> Mounths</h1></div>
+                <div><h1><b id="dias">--</b> Days</h1></div>
             </div>
         </div>
     </div>
-
+    <footer>Challenge by Frontend Mentor. Coded by <a href="https://github.com/JuliaGCB"> Júlia Campos</a> </footer>
 <script src="/js/main.js"></script>
 </body>
 </html>
