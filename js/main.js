@@ -1,33 +1,42 @@
-function calcularIdade(){
-   const anoNascimento = document.getElementById('input-ano').value;
-   const mesNascimento = document.getElementById('input-mes').value;
-   const diaNascimento = document.getElementById('input-dia').value;
 
-   const dataNascimento = new Date(anoNascimento, mesNascimento, diaNascimento);
+function calcularIdade() {
+  const anoNascimento = document.getElementById('input-ano').value;
+  const mesNascimento = document.getElementById('input-mes').value;
+  const diaNascimento = document.getElementById('input-dia').value;
 
+  if (anoNascimento < 1900 || anoNascimento > 2023 || mesNascimento < 1 || mesNascimento > 12 || diaNascimento < 1 || diaNascimento > 31) {
+    alert("Por favor, preencha os campos de data de nascimento com valores válidos.");
+    anoNascimento.style.border = '2px solid red';
+    mesNascimento.style.border = '2px solid red';
+    diaNascimento.style.border = '2px solid red';
+    limparCamposExibicao();
+    return;
+  }
 
-  /* if(anoNascimento || mesNascimento || diaNascimento === ''){ 
-        alert("Por Favor, coloque uma data de nascimento \ Please enter a date of birth");
-   }else{
-    
-   if(anoNascimento || mesNascimento|| diaNascimento === ""){
-      alert("Por Favor, coloque uma data de nascimento \\ Please enter a date of birth");
-   }*/
-   
+  const dataNascimento = new Date(anoNascimento, mesNascimento - 1, diaNascimento);
+  const dataAtual = new Date();
 
-   const dataAtual = new Date();
-   
-   const idadeEmAnos = dataAtual.getFullYear() - dataNascimento.getFullYear();
-   const mesesRestantes = dataAtual.getMonth() - dataNascimento.getMonth();
-   const diasRestantes = dataAtual.getDate() - dataNascimento.getDate();
+  let idadeEmAnos = dataAtual.getFullYear() - dataNascimento.getFullYear();
+  let mesesRestantes = dataAtual.getMonth() - dataNascimento.getMonth();
+  let diasRestantes = dataAtual.getDate() - dataNascimento.getDate();
 
-   const resultado = `${idadeEmAnos}`;
-   const result = `${mesesRestantes}`;
-   const res = `${diasRestantes}`;
-   
+  if (diasRestantes < 0) {
+    mesesRestantes--;
+    diasRestantes += new Date(dataNascimento.getFullYear(), dataNascimento.getMonth() + 1, 0).getDate();
+  }
 
-   document.getElementById('ano').textContent = resultado;
-   document.getElementById('meses').textContent = result;
-   document.getElementById('dias').textContent = res;
+  if (mesesRestantes < 0) {
+    idadeEmAnos--;
+    mesesRestantes += 12;
+  }
 
+  document.getElementById('ano').textContent = idadeEmAnos;
+  document.getElementById('meses').textContent = mesesRestantes;
+  document.getElementById('dias').textContent = diasRestantes;
+}
+
+function limparCamposExibicao() {
+  document.getElementById('ano').textContent = '--';
+  document.getElementById('meses').textContent = '--';
+  document.getElementById('dias').textContent = '--';
 }
