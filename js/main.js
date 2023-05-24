@@ -6,9 +6,6 @@ function calcularIdade() {
 
   if (anoNascimento < 1900 || anoNascimento > 2023 || mesNascimento < 1 || mesNascimento > 12 || diaNascimento < 1 || diaNascimento > 31) {
     alert("Por favor, preencha os campos de data de nascimento com valores válidos.");
-    anoNascimento.style.border = '2px solid red';
-    mesNascimento.style.border = '2px solid red';
-    diaNascimento.style.border = '2px solid red';
     limparCamposExibicao();
     return;
   }
