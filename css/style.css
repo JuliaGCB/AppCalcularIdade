@@ -6,8 +6,8 @@ body {
     margin: 0px
 }
 .container{
-    width: 100vw;
-    height: 95vh;
+    /*width: 100vw;*/
+    height: 97.5vh;
     background: #d4dde7;
     display: flex;
     flex-direction: row;
@@ -18,9 +18,10 @@ body {
     width: 74vh;
     height: 450px;
     background: #fff;
-    padding: 35px 35px 0 35px;
+    padding: 35px 0px 0 35px;
     padding-top: 30px;
     border-radius: 15px;
+    border-bottom-right-radius: 25%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -57,6 +58,7 @@ input{
     font-size: 20px;
     cursor: pointer;
 }
+
 #botao{
     display: flex;
     flex-direction: column;
@@ -113,7 +115,7 @@ footer{
     justify-content: center;
     align-items: center;
     background-color: #d4dde7;
-    padding-bottom: 12px;
+    padding-bottom: 5px;
 }
 footer a{
     margin-left: 5px;

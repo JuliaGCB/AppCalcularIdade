@@ -6,12 +6,15 @@ function calcularIdade(){
    const dataNascimento = new Date(anoNascimento, mesNascimento, diaNascimento);
 
 
-   if(anoNascimento || mesNascimento || diaNascimento === ''){ 
+  /* if(anoNascimento || mesNascimento || diaNascimento === ''){ 
         alert("Por Favor, coloque uma data de nascimento \ Please enter a date of birth");
    }else{
     
-   }
+   if(anoNascimento || mesNascimento|| diaNascimento === ""){
+      alert("Por Favor, coloque uma data de nascimento \\ Please enter a date of birth");
+   }*/
    
+
    const dataAtual = new Date();
    
    const idadeEmAnos = dataAtual.getFullYear() - dataNascimento.getFullYear();
@@ -21,6 +24,7 @@ function calcularIdade(){
    const resultado = `${idadeEmAnos}`;
    const result = `${mesesRestantes}`;
    const res = `${diasRestantes}`;
+   
 
    document.getElementById('ano').textContent = resultado;
    document.getElementById('meses').textContent = result;

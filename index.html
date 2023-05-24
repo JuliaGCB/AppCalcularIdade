@@ -14,15 +14,15 @@
             <div class="inputs">
                 <div class="idade-input">
                     <p>Day</p>
-                    <input type="number" name="" id="input-dia" placeholder="DD">
+                    <input type="number" name="" id="input-dia" placeholder="DD" pattern="[1-31]">
                 </div>
                 <div class="idade-input">
                     <p>Month</p>
-                    <input type="number" name="" id="input-mes" placeholder="MM">
+                    <input type="number" name="" id="input-mes" placeholder="MM" pattern="[1-12]">
                 </div>
                 <div class="idade-input">
                     <p>Year</p>
-                    <input type="number" name="" id="input-ano" placeholder="YYYY">
+                    <input type="number" name="" id="input-ano" placeholder="YYYY" pattern="[1900-2023]">
                 </div>
              </div>
               <div class="botao">
@@ -41,8 +41,10 @@
                 <div><h1><b id="dias">--</b> Days</h1></div>
             </div>
         </div>
+      
     </div>
-    <footer>Challenge by Frontend Mentor. Coded by <a href="https://github.com/JuliaGCB"> Júlia Campos</a> </footer>
+      <div id="footer"><footer>Challenge by Frontend Mentor. Coded by <a href="https://github.com/JuliaGCB"> Júlia Campos</a> </footer></div>
+   
 <script src="/js/main.js"></script>
 </body>
 </html>
